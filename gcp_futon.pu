@@ -1,0 +1,7 @@
+@startuml
+title シーケンス図
+スケジューラー -> Google_pubhub: トリガー
+Google_pubhub --> WeatherAPI: リクエスト（APIキー）
+WeatherAPI --> Google_pubhub: レスポンス（天気）
+Google_pubhub --> Googleカレンダー: リクエスト（認証、予定作成）
+@enduml

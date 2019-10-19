@@ -1,0 +1,9 @@
+@startuml
+title シーケンス図
+alexa -> lambda: トリガー
+lambda --> WeatherAPI: リクエスト（APIキー）
+WeatherAPI --> lambda: レスポンス（天気）
+lambda --> AlexaリマインダーAPI: リクエスト（タイトル、時刻）
+AlexaリマインダーAPI --> alexa: リクエスト
+alexa --> user:通知
+@enduml

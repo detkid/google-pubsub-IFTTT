@@ -1,0 +1,10 @@
+@startuml
+title シーケンス図
+スケジューラー -> Google_pubhub: トリガー(金曜、土曜夜))
+Google_pubhub --> WeatherAPI: リクエスト（APIキー）
+WeatherAPI --> Google_pubhub: レスポンス（翌日天気）
+opt 晴れ
+    Google_pubhub --> IFTTT: Webリクエスト
+    IFTTT --> Googleカレンダー: リクエスト（認証、予定作成）
+end
+@enduml
