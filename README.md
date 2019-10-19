@@ -1,3 +1,3 @@
 # google-pubsub-IFTTT
 
-![IFTTT_webhookシーケンス図.png]
+![シーケンス図](IFTTT_webhookシーケンス図.png)
